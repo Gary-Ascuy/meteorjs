@@ -7,6 +7,5 @@ printf '\n'
 
 echo "For mode details find:"
 echo "  https://hub.docker.com/u/ziosd/"
-echo "  https://github.com/Gary-Ascuy/meteorjs"
-
-
+echo "  https://github.com/Gary-Ascuy/meteorjs/"
+printf '\n'
