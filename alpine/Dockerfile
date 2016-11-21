@@ -1,4 +1,5 @@
 # Zio Software Development (ziosd) - Meteor Base Image
+# docker build -t meteorjs/meteor-alpine:latest
 
 FROM node:4.6.2-alpine
 MAINTAINER Gary Ascuy <gary.ascuy@gmail.com>
