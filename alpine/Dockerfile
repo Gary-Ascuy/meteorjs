@@ -11,12 +11,6 @@ ENV BUILD_PACKAGES="python make gcc g++ git libuv bash curl tar bzip2" \
     ROOT_URL=http://localhost:3000 \
     PORT=3000
 
-ADD astral.tar.gz /root/app
-
-RUN apk --update add ${BUILD_PACKAGES} \
-  && mkdir -p /root/app/bundle \
-  && (cd programs/server/ && npm i && npm run install) \
-  && apk del --purge ${BUILD_PACKAGES}
-
+RUN apk --update add ${BUILD_PACKAGES}
 EXPOSE 3000
 CMD node main.js
