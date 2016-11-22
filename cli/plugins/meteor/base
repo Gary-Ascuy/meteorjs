@@ -1,0 +1,6 @@
+# Zio Software Development (Zio SD) - Generated Image
+# docker build -t app .
+
+FROM meteorjs/base
+MAINTAINER Gary Ascuy <gary.ascuy@gmail.com>
+ADD __BUILD__ /root/app
