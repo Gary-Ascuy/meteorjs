@@ -12,17 +12,17 @@
 // node get subcommand alpinize --plugin nodejs >> alpinize
 
 function get(args) {
-  let plugin = 'meteor';
-  let subcommand = args[0];
+  var plugin = 'meteor';
+  var subcommand = args[0];
   if (subcommand[0] === '/') {
-    const cmd = subcommand.split(/\//);
+    var cmd = subcommand.split(/\//);
     if (cmd.length > 2) {
       plugin = cmd[1];
       subcommand = cmd.slice(2).join('/');
     }
   }
 
-  let index = args.indexOf('--plugin');
+  var index = args.indexOf('--plugin');
   if (index > 0) {
     plugin = args[++index];
     args.splice(index, 2); // don't use for now
@@ -30,6 +30,6 @@ function get(args) {
   return {subcommand, plugin};
 }
 
-const field = process.argv[2];
-const args = process.argv.slice(3);
+var field = process.argv[2];
+var args = process.argv.slice(3);
 console.log(get(args)[field]);
