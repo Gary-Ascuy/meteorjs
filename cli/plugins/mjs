@@ -1,8 +1,8 @@
 # Zio Software Development - Command Line Interface
 # Gary Ascuy <gary.ascuy@gmail.com>
-# usage: eval "$(docker run --rm --entrypoint config meteorjs/cli docker)"
+# usage: eval "$(docker run --rm --entrypoint xconfig meteorjs/cli docker)"
 
 METEORJS_DOCKER=__DOCKER__
 
 alias mjs="${METEORJS_DOCKER} run --rm meteorjs/cli"
-alias alpinize="${METEORJS_DOCKER} run -v ./:/meteor --rm meteorjs/cli alpinize"
+alias alpinize="${METEORJS_DOCKER} run -v $(pwd):/meteor --rm meteorjs/cli alpinize"
